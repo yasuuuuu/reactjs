@@ -25,6 +25,7 @@ group :development do
   gem 'rubocop'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'foreman'
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
