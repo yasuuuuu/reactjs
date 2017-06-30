@@ -1,0 +1,90 @@
+AllCops:
+  TargetRubyVersion: 2.4
+  DisplayCopNames: true
+  Exclude:
+    - bin/*
+    - config/**/*
+    - db/*
+    - Gemfile
+    - vendor/bundle/**/*
+    - node_modules/**/*
+
+Rails:
+  Enabled: true
+
+Style/BlockDelimiters:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/EmptyLines:
+  Enabled: false
+
+Style/EmptyLinesAroundAccessModifier:
+  Enabled: false
+
+Style/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Style/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Style/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+Style/EmptyLinesAroundMethodBody:
+  Enabled: false
+
+Style/EmptyLiteral:
+  Enabled: false
+
+Style/EndBlock:
+  Enabled: false
+
+Style/EndOfLine:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# private/protected は一段深くインデントする
+Style/IndentationConsistency:
+  EnforcedStyle: rails
+
+Style/SpaceBeforeBlockBraces:
+  Enabled: false
+
+Style/TrailingBlankLines:
+  Enabled: false
+
+Style/TrailingWhitespace:
+  Enabled: false
+
+Style/MultilineOperationIndentation:
+  Enabled: false
+
+Lint/UnusedBlockArgument:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 100
+
+Metrics/ClassLength:
+  Max: 250
+
+Metrics/MethodLength:
+  Max: 50
+
+Metrics/LineLength:
+  Max: 160
+
+Metrics/ModuleLength:
+  Max: 150
+
+Documentation:
+  Enabled: false
+
+AsciiComments:
+  Enabled: false
+

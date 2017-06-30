@@ -1,0 +1,11 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Reactjs
+    = csrf_meta_tags
+    / <haml_loud> stylesheet_link_tag    &#39;application&#39;, media: &#39;all&#39;, &#39;data-turbolinks-track&#39;: &#39;reload&#39; </haml_loud>
+    / <haml_loud> javascript_include_tag &#39;application&#39;, &#39;data-turbolinks-track&#39;: &#39;reload&#39; </haml_loud>
+  %body
+    = javascript_pack_tag 'hello_react'
+    = yield
