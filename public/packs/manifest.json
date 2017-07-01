@@ -1,4 +1,11 @@
 {
   "application.js": "http://0.0.0.0:8080/packs/application.js",
-  "hello_react.js": "http://0.0.0.0:8080/packs/hello_react.js"
+  "excel.css": "http://0.0.0.0:8080/packs/excel.css",
+  "excel.js": "http://0.0.0.0:8080/packs/excel.js",
+  "excel/excel.css": "http://0.0.0.0:8080/packs/excel/excel.css",
+  "excel/excel.js": "http://0.0.0.0:8080/packs/excel/excel.js",
+  "hello/hello.js": "http://0.0.0.0:8080/packs/hello/hello.js",
+  "hello_react.js": "http://0.0.0.0:8080/packs/hello_react.js",
+  "text_count.js": "http://0.0.0.0:8080/packs/text_count.js",
+  "text_count/text_count.js": "http://0.0.0.0:8080/packs/text_count/text_count.js"
 }
