@@ -44,7 +44,7 @@ export default class Excel extends React.Component {
     data[this.state.edit.row][this.state.edit.cell] = input.value;
     this.setState({
       edit: null,
-      data
+      data,
     });
   }
 
