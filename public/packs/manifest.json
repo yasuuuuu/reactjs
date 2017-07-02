@@ -1,11 +1,11 @@
 {
-  "application.js": "http://0.0.0.0:8080/packs/application.js",
-  "excel.css": "http://0.0.0.0:8080/packs/excel.css",
-  "excel.js": "http://0.0.0.0:8080/packs/excel.js",
-  "excel/excel.css": "http://0.0.0.0:8080/packs/excel/excel.css",
-  "excel/excel.js": "http://0.0.0.0:8080/packs/excel/excel.js",
-  "hello/hello.js": "http://0.0.0.0:8080/packs/hello/hello.js",
-  "hello_react.js": "http://0.0.0.0:8080/packs/hello_react.js",
-  "text_count.js": "http://0.0.0.0:8080/packs/text_count.js",
-  "text_count/text_count.js": "http://0.0.0.0:8080/packs/text_count/text_count.js"
+  "application.js": "/packs/application.js",
+  "excel.css": "/packs/excel.css",
+  "excel.js": "/packs/excel.js",
+  "excel/excel.css": "/packs/excel/excel.css",
+  "excel/excel.js": "/packs/excel/excel.js",
+  "hello/hello.js": "/packs/hello/hello.js",
+  "hello_react.js": "/packs/hello_react.js",
+  "text_count.js": "/packs/text_count.js",
+  "text_count/text_count.js": "/packs/text_count/text_count.js"
 }
