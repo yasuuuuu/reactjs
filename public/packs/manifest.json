@@ -6,9 +6,11 @@
   "excel/excel.js": "http://0.0.0.0:8080/packs/excel/excel.js",
   "hello/hello.js": "http://0.0.0.0:8080/packs/hello/hello.js",
   "hello_react.js": "http://0.0.0.0:8080/packs/hello_react.js",
-  "react-logo.svg": "http://0.0.0.0:8080/packs/react-logo.svg",
   "text_count.js": "http://0.0.0.0:8080/packs/text_count.js",
   "text_count/text_count.js": "http://0.0.0.0:8080/packs/text_count/text_count.js",
-  "winepad.css": "http://0.0.0.0:8080/packs/winepad.css",
-  "winepad.js": "http://0.0.0.0:8080/packs/winepad.js"
+  "whinepad-logo.png": "http://0.0.0.0:8080/packs/whinepad-logo.png",
+  "whinepad.css": "http://0.0.0.0:8080/packs/whinepad.css",
+  "whinepad.js": "http://0.0.0.0:8080/packs/whinepad.js",
+  "whinepad_discover.css": "http://0.0.0.0:8080/packs/whinepad_discover.css",
+  "whinepad_discover.js": "http://0.0.0.0:8080/packs/whinepad_discover.js"
 }
