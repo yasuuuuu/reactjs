@@ -45,8 +45,8 @@ export default class Rating extends Component {
         <span
           className={ i <= this.state.tmpRating ? 'RatingOn' : null }
           key={i}
-          // onClick={ !this.props.readonly && this.setRating(i) }
-          // onMouseOver={ !this.props.readonly && this.setTemp(i) }
+          onClick={ !this.props.readonly && this.setRating.bind(null, i) }
+          onMouseOver={ !this.props.readonly && this.setTemp.bind(null, i) }
         >
           &#9734;
         </span>
@@ -59,6 +59,7 @@ export default class Rating extends Component {
           'Rating': true,
           'RatingReadonly': this.props.readonly,
         })}
+        onMouseOut={this.reset}
       >
         {stars}
         {this.props.readonly || !this.props.id
