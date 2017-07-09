@@ -5,6 +5,8 @@ import Button from '../whinepad/components/button';
 import Suggest from '../whinepad/components/suggest';
 import Rating from '../whinepad/components/rating';
 import FormInput from '../whinepad/components/form_input';
+import Actions from '../whinepad/components/actions';
+import Dialog from '../whinepad/components/dialog';
 import '../whinepad/styles/application';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -57,6 +59,23 @@ document.addEventListener('DOMContentLoaded', () => {
           <td><FormInput type="text" /></td>
         </tr>
       </tbody></table>
+      <h2>Actions</h2>
+      <div><Actions onAction={type => alert(type)} /></div>
+      <h2>Dialog</h2>
+      <Dialog
+        header="単純な例"
+        onAction={type => alert(type)}
+      >
+        こんにちは！
+      </Dialog>
+      <Dialog header="キャンセルボタンなし、カスタムのボタン"
+              hasCancel={false}
+              confirmLabel="ラベル"
+              onAction={type => alert(type)}
+      >
+        何でも表示します。例えば、
+        <Button>ボタン</Button>
+      </Dialog>
     </div>,
     document.body.appendChild(document.createElement('div')),
   )
