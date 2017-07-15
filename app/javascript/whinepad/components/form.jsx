@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Rating from './rating';
-
+import FormInput from './form_input';
 
 export default class Form extends Component {
   constructor(props) {
     super(props);
   }
 
-  getDate() {
-    let data = {};
+  getData() {
+    const data = {};
     this.props.fields.forEach(field =>
-      data[field.id] = this.refs[field.id].getValue()
+      data[field.id] = this.refs[field.id].getValue(),
     );
     return data;
   }
 
   render() {
-    return(
+    return (
       <form className="Form">
-        {this.props.fields.map(field => {
+        {this.props.fields.map((field) => {
           const prefilled = this.props.initialData && this.props.initialData[field.id];
           if (!this.props.readonly) {
             return (
@@ -44,14 +44,14 @@ export default class Form extends Component {
           );
         })}
       </form>
-    )
+    );
   }
 }
 
 Form.propTypes = {
-  fields: PropTYpes.arrayOf(PropTypes.shape({
+  fields: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
-    label: PropeTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     options: PropTypes.arrayOf(PropTypes.string),
   })).isRequired,

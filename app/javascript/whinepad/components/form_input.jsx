@@ -22,7 +22,7 @@ export default class FormInput extends Component {
       defaultValue: this.props.defaultValue,
     };
 
-    switch(this.props.type) {
+    switch (this.props.type) {
       case 'year':
         return (
           <input

@@ -30,8 +30,8 @@ export default class Rating extends Component {
   setRating(rating) {
     this.setState({
       tmpRating: rating,
-      rating: rating,
-    })
+      rating,
+    });
   }
 
   reset() {
@@ -49,15 +49,15 @@ export default class Rating extends Component {
           onMouseOver={ !this.props.readonly && this.setTemp.bind(null, i) }
         >
           &#9734;
-        </span>
+        </span>,
       );
     }
 
     return (
       <div
         className={classNames({
-          'Rating': true,
-          'RatingReadonly': this.props.readonly,
+          Rating: true,
+          RatingReadonly: this.props.readonly,
         })}
         onMouseOut={this.reset}
       >
