@@ -34,7 +34,7 @@ class Whinepad extends Component {
   }
 
   _onExcelDataChange(data) {
-    this.setState({ data: data });
+    this.setState({ data });
     this._commitToStorage(data);
   }
 
@@ -114,10 +114,10 @@ class Whinepad extends Component {
 
 Whinepad.propTypes = {
   schema: PropTypes.arrayOf(
-    PropTypes.object,
+    PropTypes.object
   ),
   initialData: PropTypes.arrayOf(
-    PropTypes.object,
+    PropTypes.object
   ),
 };
 

@@ -11,7 +11,7 @@ export default class Form extends Component {
   getData() {
     const data = {};
     this.props.fields.forEach(field =>
-      data[field.id] = this.refs[field.id].getValue(),
+      data[field.id] = this.refs[field.id].getValue()
     );
     return data;
   }

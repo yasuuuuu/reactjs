@@ -29,21 +29,21 @@ export default class Excel extends React.Component {
 
   componentDidMount() {
     document.onkeydown = (e) => {
-      if(e.altKey && e.shiftKey && e.keyCode === 82) {
+      if (e.altKey && e.shiftKey && e.keyCode === 82) {
         this.replay();
       }
-    }
+    };
   }
 
   replay() {
-    if(this.log.length === 0) {
+    if (this.log.length === 0) {
       console.log('ステートが記録されていません');
       return;
     }
     let idx = 1;
     const interval = setInterval(() => {
       idx++;
-      if(idx === this.log.length - 1) {
+      if (idx === this.log.length - 1) {
         clearInterval(interval);
       }
       this.setState(this.log[idx]);
@@ -67,7 +67,7 @@ export default class Excel extends React.Component {
     this.logSetState({
       data,
       sortby: column,
-      descending
+      descending,
     });
   }
 
@@ -100,23 +100,23 @@ export default class Excel extends React.Component {
   }
 
   toggleSearch() {
-    if(this.state.search) {
+    if (this.state.search) {
       this.logSetState({
         data: this.preSearchData,
         search: false,
-      })
+      });
     } else {
       this.preSearchData = this.state.data;
       this.logSetState({
         search: true,
-      })
+      });
     }
   }
 
   search(e) {
     const needle = e.target.value.toLowerCase();
 
-    if(!needle) {
+    if (!needle) {
       this.logSetState({
         data: this.preSearchData,
       });
@@ -124,21 +124,21 @@ export default class Excel extends React.Component {
     }
 
     const idx = e.target.dataset.idx;
-    const searchdata = this.preSearchData.filter((row) =>
+    const searchdata = this.preSearchData.filter(row =>
       row[idx].toString().toLowerCase().indexOf(needle) > -1
     );
-    this.logSetState({data: searchdata});
+    this.logSetState({ data: searchdata });
   }
 
   renderSearch() {
-    if(!this.state.search) {
+    if (!this.state.search) {
       return null;
     }
 
     const tds = this.props.headers.map((_ignore, idx) =>
       <td key={idx}><input type="text" data-idx={idx} /></td>
     );
-    return(
+    return (
       <tr onChange={this.search}>
         {tds}
       </tr>
@@ -155,7 +155,7 @@ export default class Excel extends React.Component {
         <a onClick={this.download('json')} href="data.json">JSONで保存</a>
         <a onClick={this.download('csv')} href="data.csv">CSVで保存</a>
       </div>
-    )
+    );
   }
 
   renderTable() {
@@ -169,26 +169,26 @@ export default class Excel extends React.Component {
     const trs = this.state.data.map((row, rowidx) =>
       <tr key={rowidx}>
         {this.tds(row, rowidx)}
-      </tr>,
+      </tr>
     );
 
     return (
       <table>
         <thead onClick={this.sort}>
-        <tr>
-          {ths}
-        </tr>
-        {this.renderSearch()}
+          <tr>
+            {ths}
+          </tr>
+          {this.renderSearch()}
         </thead>
         <tbody onDoubleClick={this.showEditor}>
-        {trs}
+          {trs}
         </tbody>
       </table>
     );
   }
 
   render() {
-    return(
+    return (
       <div>
         {this.renderToolbar()}
         {this.renderTable()}

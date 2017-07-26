@@ -49,7 +49,7 @@ export default class Rating extends Component {
           onMouseOver={ !this.props.readonly && this.setTemp.bind(null, i) }
         >
           &#9734;
-        </span>,
+        </span>
       );
     }
 

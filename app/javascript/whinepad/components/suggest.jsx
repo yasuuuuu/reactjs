@@ -24,7 +24,7 @@ export default class Suggest extends Component {
         />
         <datalist id={randomid}>
           {this.props.options.map((item, idx) =>
-            <option value={item} key={idx} />,
+            <option value={item} key={idx} />
           )}
         </datalist>
       </div>

@@ -207,10 +207,10 @@ export default class Excel extends Component {
                   <td
                     className={classNames({
                       [`schema-${schema.id}`]: true,
-                      'ExcelEditable': !isRating,
-                      'ExcelDataLeft': schema.align === 'left',
-                      'ExcelDataRight': schema.align === 'right',
-                      'ExcelDataCenter': schema.align !== 'left' && schema.align !== 'right',
+                      ExcelEditable: !isRating,
+                      ExcelDataLeft: schema.align === 'left',
+                      ExcelDataRight: schema.align === 'right',
+                      ExcelDataCenter: schema.align !== 'left' && schema.align !== 'right',
                     })}
                     key={idx}
                     data-row={rowidx}
@@ -219,9 +219,9 @@ export default class Excel extends Component {
                   </td>
                 );
               }, this)}
-              <td className="ExcelDataCenter">
-                <Actions onAction={this._actionClick.bind(this, rowidx)}/>
-              </td>
+            <td className="ExcelDataCenter">
+              <Actions onAction={this._actionClick.bind(this, rowidx)}/>
+            </td>
             </tr>
           ), this)}
         </tbody>
@@ -232,10 +232,10 @@ export default class Excel extends Component {
 
 Excel.propTypes = {
   schema: PropTypes.arrayOf(
-    PropTypes.object,
+    PropTypes.object
   ),
   initialData: PropTypes.arrayOf(
-    PropTypes.object,
+    PropTypes.object
   ),
   onDataChange: PropTypes.func,
 };
