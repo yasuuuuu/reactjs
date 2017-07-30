@@ -4,7 +4,6 @@ jest
 ;
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-dom/test-utils';
 import Actions from '../whinepad/components/actions';
 import Wrap from './wrap';
