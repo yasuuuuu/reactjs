@@ -1,3 +1,5 @@
+/* @flow */
+
 import Button from './button';
 import Dialog from './dialog';
 import Excel from './excel';
