@@ -10,5 +10,7 @@ describe('ボタンの描画', () => {
       </button>
     );
     expect(ReactDOM.findDOMNode(button).textContent).toEqual('こんにちは');
+    ReactTestUtils.Simulate.click(button);
+    expect(ReactDOM.findDOMNode(button).textContent).toEqual('さようなら');
   });
 });
