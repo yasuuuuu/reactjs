@@ -1,10 +1,26 @@
+// @flow
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Rating from './rating';
 import Suggest from './suggest';
 
+type FormInputFieldType = 'year' | 'suggest' | 'rating' | 'text' | 'input';
+
+export type FormInputFieldValue = string | number;
+
+export type FormInputField = {
+  type: FormInputFieldType,
+  defaultValue?: FormInputFieldValue,
+  id?: string,
+  options?: Array<string>,
+  label?: string,
+}
+
 
 export default class FormInput extends Component {
+  props: FormInputField;
+
   constructor(props) {
     super(props);
   }

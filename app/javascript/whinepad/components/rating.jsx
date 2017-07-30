@@ -1,9 +1,25 @@
+// @flow
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+type Props = {
+  defaultValue: number,
+  readonly: boolean,
+  max: number,
+}
+
+type State = {
+  rating: number,
+  tmpRating: number,
+}
+
 export default class Rating extends Component {
-  constructor(props) {
+  props: Props;
+  state: State;
+
+  constructor(props: Props) {
     super(props);
     this.getValue = this.getValue.bind(this);
     this.setTemp = this.setTemp.bind(this);
@@ -15,7 +31,7 @@ export default class Rating extends Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps: Props) {
     this.setRating(nextProps.defaultValue);
   }
 

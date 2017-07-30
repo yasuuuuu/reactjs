@@ -1,10 +1,21 @@
+// @flow
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Rating from './rating';
 import FormInput from './form_input';
+import type {FormInputField, FormInputFieldValue} from './form_input';
+
+type Props = {
+  fields: Array<FormInputField>,
+  initialDate?: Object,
+  readonly?: boolean,
+}
 
 export default class Form extends Component {
-  constructor(props) {
+  props: Props;
+
+  constructor(props: Props) {
     super(props);
   }
 

@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -71,10 +73,11 @@ export default class Excel extends React.Component {
     });
   }
 
-  showEditor(e) {
+  showEditor(e: Event) {
+    const target = ((e.target: any): HTMLElement);
     this.logSetState({ edit: {
-      row: parseInt(e.target.dataset.row, 10),
-      cell: e.target.cellIndex,
+      row: parseInt(target.dataset.row, 10),
+      cell: target.cellIndex,
     } });
   }
 
